@@ -1,0 +1,37 @@
+﻿<Page x:Class="Examen23012020.AddStudentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Examen23012020"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddStudentPage">
+
+    <Page.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="150" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="80" />
+        </Style>
+    </Page.Resources>
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Label Content="Nieuwe Student" HorizontalContentAlignment="Center" Width="230" FontSize="25" Margin="0 0 0 25" />
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Voornaam:" />
+            <TextBox x:Name="TextBoxFirstName" Width="150" TextChanged="TextBoxFirstName_TextChanged" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Achternaam:" />
+            <TextBox x:Name="TextBoxLastName" TextChanged="TextBoxLastName_TextChanged" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Klasnummer:" />
+            <TextBox x:Name="TextBoxClassNumber" TextChanged="TextBoxClassNumber_TextChanged" />
+        </StackPanel>
+        <Button x:Name="ButtonSaveStudent" Content="Student Toevoegen" Width="230" Margin="0 25 0 0" Height="40" IsEnabled="False" Click="ButtonSaveStudent_Click" />
+    </StackPanel>
+</Page>
